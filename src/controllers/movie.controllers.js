@@ -63,7 +63,7 @@ const setActor = catchError(async(req, res) => {
 
     await movie.setActors(req.body)
 
-    const actor = movie.getActors()
+    const actor = await movie.getActors()
     return res.json(actor)
 })
 
